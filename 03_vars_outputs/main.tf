@@ -62,3 +62,10 @@ resource "local_file" "service_configs3" {
   port=3000
   EOT
 }
+
+# outputs
+
+output "filename_1" {
+  value = local_file.service_configs.filename
+  sensitive = true
+}
